@@ -1,4 +1,4 @@
-namespace IntCollections
+namespace EqualPlayer
 {
     public enum PlayerClass
     {
