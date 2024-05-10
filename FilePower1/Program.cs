@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace FilePower1
 {
@@ -6,7 +8,29 @@ namespace FilePower1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            string file = args[0];
+
+
+            bool readingInput = true;
+
+
+            Queue<string> userInputs = new Queue<string>();
+            while (readingInput)
+            {
+                string userInput = Console.ReadLine();
+                if (userInput == "")
+                {
+                    break;
+                }
+                else
+                {
+
+                    userInputs.Enqueue(userInput);
+                }
+            }
+
+            File.WriteAllLines(file, userInputs);
         }
     }
 }
